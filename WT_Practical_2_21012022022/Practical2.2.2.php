@@ -1,4 +1,4 @@
-<!-- Embedding HTML markups in PHP code -->
+<!-- Embedding PHP code in HTML -->
 
 
 <?php
