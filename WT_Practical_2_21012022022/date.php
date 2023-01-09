@@ -61,98 +61,108 @@ a - Lowercase Ante meridiem and Post meridiem (am or pm)
 PHP Time parameters
 
 “r”	Returns the full date and time	
-<?php
+
 echo date("r");
-?>
+
 “a”,”A”	Returns whether the current time is am or pm, AM or PM respectively	
-<?php
+
 echo date("a");
 echo date("A");
-?>
+
 “g”,”G”	Returns the hour without leading zeroes [1 to 12], [0 to 23] respectively	
-<?php
+
 echo date("g"); 
 echo date("G");
-?>
+
 “h”,”H”	Returns the hour with leading zeros [01 to 12],[00 to 23] respectively	
-<?php
+
 echo date("h"); 
 echo date("H");
-?>
+
 “i”,”s”	Returns the minutes/seconds with leading zeroes [00 to 59]	
-<?php
+
 echo date("i"); 
 echo date("s");
-?>
+
 
 Day parameters
 
 “d”	Returns the day of the month with leading zeroes [01 to 31]	
-<?php
+
 echo date("d");
-?>
+
 “j”	Returns the day of the month without leading zeroes [1 to 31]	
-<?php
+
 echo date("j");
-?>
+
 “D”	Returns the first 3 letters of the day name [Sub to Sat]	
-<?php
+
 echo date("D");
-?>
+
 “l”	Returns day name of the week [Sunday to Saturday]	
-<?php
+
 echo date("l");
-?>
+
 “w”	Returns day of the week without leading zeroes [0 to 6] Sunday is represent by zero (0) through to Saturday represented by six (6)	
-<?php
+
 echo date("w");
-?>
+
 “z”	Returns the day of the year without leading spaces [0 through to 365]	
-<?php
+
 echo date("z");
-?>
+
 
 
 Month Parameter
 
 “m”	Returns the month number with leading zeroes [01 to 12]	
-<?php
+
 echo date("m");
-?>
+
 “n”	Returns the month number without leading zeroes [01 to 12]	
-<?php
+
 echo date("n");
-?>
+
 “M”	Returns the first 3 letters of the month name [Jan to Dec]	
-<?php
+
 echo date("M");
-?>
+
 “F”	Returns the month name [January to December]	
-<?php
+
 echo date("F");
-?>
+
 “t”	Returns the number of days in a month [28 to 31]	
-<?php
-echo date("t");
-?>
+
+//echo date("t");
+
 
 Year parameters
 
 “L”	Returns 1 if it’s a leap year and 0 if it is not a leap year	
-<?php
-echo date("L");
-?>
+
+//echo date("L");
+
 “Y”	Returns four digit year format	
-<?php
-echo date("Y");
-?>
+
+//echo date("Y");
+
 “y”	Returns two (2) digits year format (00 to 99)	
-<?php
-echo date("y");
-?>
+
+//echo date("y");
 
 -->
 
 <?php
+//Time zones we can set by using date_default_timezone_set() 
+date_default_timezone_set("Asia/Kolkata");
+
 echo date("r");
+
+//"timezone_identifiers_list()" this function will return an array with list of time zones available.
+
+// $x = timezone_identifiers_list();
+// while (list ($key, $val) = each ($x)) 
+// {
+//     echo "$key -> $val <br>";
+// } 
 ?>
