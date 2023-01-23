@@ -28,17 +28,22 @@
     $n = readline("Enter Fibonacci Number: ");
 
     //Recursive
+    echo "===== Recursive Method =====\n";
     $start = microtime(true);
     $memo = [];
     for($i=0;$i<=$n;$i++)
     {
         $memo[$i] = 0;
     }
-    $memo = fibRecursiveMethod($memo,$n);
+    echo "Ans: ";
+    for ($i = 0; $i <= $n;$i++)
+    {
+        $ans = fibRecursiveMethod($memo,$i);
+        echo $ans." ";
+    }
     $end = microtime(true);
     $timeRequire = $end - $start;
-    echo "===== Recursive Method =====\n";
-    echo "Ans: ", $memo, "\nTotal Time Require: ", $timeRequire;
+    echo "\nTotal Time Require: ", $timeRequire;
 
     //Loop
     echo "\n\n===== Loop Method =====\n";
